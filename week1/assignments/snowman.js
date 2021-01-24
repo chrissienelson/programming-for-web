@@ -7,7 +7,6 @@ function setup() {
     grid = loadImage("100px_grid.png");
 }
 function draw() {
-    background(grid);
     // snowman bottom
     fill("ffffff");
     strokeWeight(20);
@@ -39,6 +38,14 @@ function draw() {
     noFill();
     strokeWeight(10);
     arc(500, 245, 60, 40, 0, PI);
+
+      //arms
+    //left arm
+    strokeWeight(15);
+    line(200, 200, 400, 400);
+
+    //right arm
+    line(800, 200, 600, 400);
 
 
 
