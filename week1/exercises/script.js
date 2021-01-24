@@ -1,5 +1,5 @@
 const hello = "world";
 console.log(hello);
 
-const name = window.prompt("what is your name");
-console.log("Hello, " + name);
+const nameInput = window.prompt('What is your name?');
+console.log('Hello ' + nameInput);
