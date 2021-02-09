@@ -25,7 +25,7 @@ secondaryColor, circleOutlineColor, dotColor) {
 
 function draw(){
     createTile(0,0,'green', 'pink', 'cyan', 'magenta');
-    createTile(0,200,'green', 'yellow', 'cyan', 'green');
+    createTile(0,200,'green', 'yellow', 'cyan', 'magenta');
     createTile(0,200,'green', 'pink', 'cyan', 'magenta');
     createTile(200,-400,'green', 'yellow', 'cyan', 'green');
     createTile(0,200, 'green', 'pink', 'cyan', 'magenta');
