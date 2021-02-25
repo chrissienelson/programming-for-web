@@ -5,6 +5,11 @@ let startingY = 100;
 let cards = [];
 const gameState = {
 
+};
+let cardback;
+function preload() {
+    cardback = loadImage('images/meow-cardback.png')
+
 }
 function setup() {
     createCanvas(900, 500);
@@ -17,7 +22,6 @@ function setup() {
         startingY += 150;
         startingX = 100;
     }
-
 }
 
 function mousePressed() {
@@ -26,7 +30,6 @@ function mousePressed() {
             console.log('flipped');
         }
     }
-
 }
 
 class Card {
@@ -42,12 +45,13 @@ class Card {
     show () {
         if(this.face === DOWN) {
             fill('magenta');
-            rect(this.x, this.y, this.width, this.height, 10);     
+            rect(this.x, this.y, this.width, this.height, 10); 
+            image(cardback, this.x + 10, this.y); 
         } else {
             fill('#aaa');
             rect(this.x, this.y, this.width, this.height, 10);
         }
-  
+
     }
 
     didHit (mouseX, mouseY) {
