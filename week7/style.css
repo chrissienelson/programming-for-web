@@ -1,0 +1,23 @@
+[v-cloak] {
+    display: none 
+  }
+  
+  body {
+      font-family: Garamond, serif;
+      background-color: tan;
+      margin: 50px;
+      color: white;
+      font-size: 25px;
+      
+  }
+  
+  h1 {
+      font-family: Helvetica, sans-serif;
+      font-size: 40px;
+  }
+  
+  a {
+      font-family: Helvetica, sans-serif;
+      color: black;
+      font-weight: bold;
+  }
