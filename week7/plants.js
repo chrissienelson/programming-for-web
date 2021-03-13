@@ -13,7 +13,7 @@ let vm = new Vue({
             light: "bright indirect to full sun",
             petFriendly: "No",
         }, {
-            name: “Fiddle leaf Fig”,
+            name: "Fiddle leaf Fig",
             botanicalName: "Ficus lyrata",
             light: "bright indirect light",
             petFriendly: "No",
