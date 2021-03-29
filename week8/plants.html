@@ -28,7 +28,14 @@
             </tbody>
         </table>
     </div>
- 
+    <form v-on:submit="tbdFunc">
+        <fieldset>
+            <legend>Add a console to the collection</legend>
+            <div>
+                <label for="plant"></label>
+                <input id="plant" type="text" v-model="newConsoleObj.plant"></div>
+        </fieldset>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="plants.js"></script>
 </body>
