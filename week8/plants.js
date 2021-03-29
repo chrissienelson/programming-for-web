@@ -1,6 +1,12 @@
 let vm = new Vue({
     el: "#myPlants",
     data: {
+        newConsoleObj: {
+            name: "",
+            botanicalName: "",
+            light: "",
+            petFriendly: ""
+        }
       plants: [
         {
             name: "Snake Plant",
@@ -29,5 +35,10 @@ let vm = new Vue({
             petFriendly: "Yes",
         },
       ]
+    }
+    methods: {
+        submitHandler: () => {
+            console.log('submitted');
+        }
     }
 });

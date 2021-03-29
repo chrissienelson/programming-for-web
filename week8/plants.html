@@ -28,14 +28,31 @@
             </tbody>
         </table>
     </div>
-    <form v-on:submit="tbdFunc">
+    <form v-on:submit="submitHandler">
         <fieldset>
             <legend>Add a console to the collection</legend>
             <div>
-                <label for="plant"></label>
-                <input id="plant" type="text" v-model="newConsoleObj.plant"></div>
+                <label for="name">Name</label>
+                <input id="name" type="text" v-model="newConsoleObj.name">
+            </div>
+
+            <div>
+                <label for="Botanicalname">Botanical Name</label>
+                <input id="botanicalName" type="text" v-model="newConsoleObj.Botanicalname">
+            </div>
+
+            <div>
+                <label for="light">Light</label>
+                <input id="light" type="text" v-model="newConsoleObj.light">
+            </div>
+
+            <div>
+                <label for="petFriendly">Pet Friendly</label>
+                <input id="petFriendly" type="text" v-model="newConsoleObj.petFriendly">
+            </div>
         </fieldset>
     </form>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="plants.js"></script>
 </body>
