@@ -28,9 +28,9 @@
             </tbody>
         </table>
     </div>
-    <form v-on:submit="submitHandler">
+    <form v-on:submit.prevent="submitHandler">
         <fieldset>
-            <legend>Add a console to the collection</legend>
+            <legend>Add a plant to the collection</legend>
             <div>
                 <label for="name">Name</label>
                 <input id="name" type="text" v-model="newConsoleObj.name">
@@ -50,6 +50,7 @@
                 <label for="petFriendly">Pet Friendly</label>
                 <input id="petFriendly" type="text" v-model="newConsoleObj.petFriendly">
             </div>
+            <button type="submit">Submit</button>
         </fieldset>
     </form>
 

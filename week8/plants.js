@@ -2,11 +2,12 @@ let vm = new Vue({
     el: "#myPlants",
     data: {
         newConsoleObj: {
-            name: "",
-            botanicalName: "",
-            light: "",
-            petFriendly: ""
-        }
+            name: '',
+            botanicalName: '',
+            light: '',
+            petFriendly: ''
+        },
+        
       plants: [
         {
             name: "Snake Plant",
@@ -33,12 +34,13 @@ let vm = new Vue({
             botanicalName: "Chamaedorea seifrizii",
             light: "low to bright indirect light",
             petFriendly: "Yes",
-        },
+        }
       ]
-    }
+    },
     methods: {
         submitHandler: () => {
             console.log('submitted');
+            vm.plant = vm.plant.concat(vm.newConsoleObj);
         }
     }
 });
