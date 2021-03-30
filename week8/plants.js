@@ -1,7 +1,7 @@
 let vm = new Vue({
     el: "#myPlants",
     data: {
-        newConsoleObj: {
+        newPlantObj: {
             name: '',
             botanicalName: '',
             light: '',
@@ -40,7 +40,21 @@ let vm = new Vue({
     methods: {
         submitHandler: () => {
             console.log('submitted');
-            vm.plants = vm.plants.concat(vm.newConsoleObj);
+            vm.plants = vm.plants.concat(vm.newPlantObj);
+            vm.resetForm();
+        },
+        resetForm: () => {
+            vm.newPlantObj = {
+                name: '',
+                botanicalName: '',
+                light: '',
+                petFriendly: ''
+            };
+        },
+        deleteItem: item => {
+            vm.plants = vm.plants.filter(plant => {
+                return plant !== plant;
+            });
         }
     }
 });

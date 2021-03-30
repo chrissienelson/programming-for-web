@@ -24,6 +24,11 @@
                     <td>{{plant.botanicalName}}</td>
                     <td>{{plant.light}}</td>
                     <td>{{plant.petFriendly}}</td>
+                    <td>
+                        <div class ="deletePlant">
+                            <button type="button" v-on:click="deleteItem (plant)">Delete</button>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -33,22 +38,22 @@
             <legend>Add a plant to the collection</legend>
             <div>
                 <label for="name">Name</label>
-                <input id="name" type="text" v-model="newConsoleObj.name">
+                <input id="name" type="text" v-model="newPlantObj.name">
             </div>
 
             <div>
                 <label for="Botanicalname">Botanical Name</label>
-                <input id="botanicalName" type="text" v-model="newConsoleObj.Botanicalname">
+                <input id="botanicalName" type="text" v-model="newPlantObj.Botanicalname">
             </div>
 
             <div>
                 <label for="light">Light</label>
-                <input id="light" type="text" v-model="newConsoleObj.light">
+                <input id="light" type="text" v-model="newPlantObj.light">
             </div>
 
             <div>
                 <label for="petFriendly">Pet Friendly</label>
-                <input id="petFriendly" type="text" v-model="newConsoleObj.petFriendly">
+                <input id="petFriendly" type="text" v-model="newPlantObj.petFriendly">
             </div>
             <button type="submit">Submit</button>
         </fieldset>
