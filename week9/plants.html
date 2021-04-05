@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="plants.css">
+</head>
+
+<body>
+    <h1>My Plants</h1>
+    <div id="myPlants">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Botanical Name</th>
+                <th>Light</th>
+                <th>Pet Friendly</th>
+            </thead>
+            
+            <tbody>
+                <tr v-for="plant in plants">
+                    <td>{{plant.name}}</td>
+                    <td>{{plant.botanicalName}}</td>
+                    <td>{{plant.light}}</td>
+                    <td>{{plant.petFriendly}}</td>
+                    <td>
+                        <div class ="deletePlant">
+                            <button type="button" v-on:click="deleteItem (plant)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form v-on:submit.prevent="submitHandler">
+        <fieldset>
+            <legend>Add a plant to the collection</legend>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" v-model="newPlantObj.name">
+            </div>
+
+            <div>
+                <label for="Botanicalname">Botanical Name</label>
+                <input id="botanicalName" type="text" v-model="newPlantObj.Botanicalname">
+            </div>
+
+            <div>
+                <label for="light">Light</label>
+                <input id="light" type="text" v-model="newPlantObj.light">
+            </div>
+
+            <div>
+                <label for="petFriendly">Pet Friendly</label>
+                <input id="petFriendly" type="text" v-model="newPlantObj.petFriendly">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="plants.js"></script>
+</body>
+</html>
