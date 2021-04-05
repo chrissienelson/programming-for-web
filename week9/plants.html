@@ -17,22 +17,27 @@
                 <th>Light</th>
                 <th>Pet Friendly</th>
             </thead>
-            
+
             <tbody>
-                <tr v-for="plant in plants">
-                    <td>{{plant.name}}</td>
-                    <td>{{plant.botanicalName}}</td>
-                    <td>{{plant.light}}</td>
-                    <td>{{plant.petFriendly}}</td>
-                    <td>
-                        <div class ="deletePlant">
-                            <button type="button" v-on:click="deleteItem (plant)">Delete</button>
-                        </div>
-                    </td>
-                </tr>
+                <tr is="plants-component"
+                v-for="(plants, index) in plants"
+                v-bind:class="{
+                    even: (index + 1) % 2 === 0, 
+                    odd: (index + 1) % 2 !==0}"
+                    is="plants-component"
+                        v-bind:name="plants.name"
+                        v-bind:botanicalname="plants.botanicalname"
+                        v-bind:light="plants.light"
+                        v-bind:petfriendly="plants.petfriendly">
+
             </tbody>
         </table>
     </div>
+
+
+
+
+
     <form v-on:submit.prevent="submitHandler">
         <fieldset>
             <legend>Add a plant to the collection</legend>
@@ -42,8 +47,8 @@
             </div>
 
             <div>
-                <label for="Botanicalname">Botanical Name</label>
-                <input id="botanicalName" type="text" v-model="newPlantObj.Botanicalname">
+                <label for="botanicalname">Botanical Name</label>
+                <input id="botanicalname" type="text" v-model="newPlantObj.botanicalname">
             </div>
 
             <div>
@@ -52,13 +57,14 @@
             </div>
 
             <div>
-                <label for="petFriendly">Pet Friendly</label>
-                <input id="petFriendly" type="text" v-model="newPlantObj.petFriendly">
+                <label for="petfriendly">Pet Friendly</label>
+                <input id="petfriendly" type="text" v-model="newPlantObj.petfriendly">
             </div>
             <button type="submit">Submit</button>
         </fieldset>
     </form>
 
+ <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="plants.js"></script>
 </body>

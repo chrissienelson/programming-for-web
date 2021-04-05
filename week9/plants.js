@@ -1,42 +1,56 @@
-let vm = new Vue({
+Vue.component('plants-component', {
+    template: `
+    <tr>
+        <td>{{name}}</td>
+        <td>{{botanicalname}}</td>
+        <td>{{light}}</td>
+        <td>{{petfriendly}}</td>
+    </tr>`,
+    props: ['name', 'botanicalname', 'light', 'petfriendly']
+  });
+
+
+const vm = new Vue({
     el: "#myPlants",
     data: {
         newPlantObj: {
             name: '',
-            botanicalName: '',
+            botanicalname: '',
             light: '',
-            petFriendly: ''
+            petfriendly: ''
         },
 
       plants: [
         {
             name: "Snake Plant",
-            botanicalName: "Sansevieria trifasciata",
+            botanicalname: "Sansevieria trifasciata",
             light: "low to bright indirect light",
-            petFriendly: "No"
+            petfriendly: "No"
         }, {
             name: "Monstera",
-            botanicalName: "Monstera deliciosa",
+            botanicalname: "Monstera deliciosa",
             light: "bright indirect to full sun",
-            petFriendly: "No"
+            petfriendly: "No"
         }, {
             name: "Fiddle leaf Fig",
-            botanicalName: "Ficus lyrata",
+            botanicalname: "Ficus lyrata",
             light: "bright indirect light",
-            petFriendly: "No"
+            petfriendly: "No"
         }, {
             name: 'Money Tree',
-            botanicalName: "Pachira aquatica",
+            botanicalname: "Pachira aquatica",
             light: "low to bright indirect light",
-            petFriendly: "Yes"
+            petfriendly: "Yes"
         }, {
             name: 'Bamboo Palm',
-            botanicalName: "Chamaedorea seifrizii",
+            botanicalname: "Chamaedorea seifrizii",
             light: "low to bright indirect light",
-            petFriendly: "Yes"
+            petfriendly: "Yes"
         }
       ]
     },
+
+
     methods: {
         submitHandler: () => {
             console.log('submitted');
@@ -46,15 +60,11 @@ let vm = new Vue({
         resetForm: () => {
             vm.newPlantObj = {
                 name: '',
-                botanicalName: '',
+                botanicalname: '',
                 light: '',
-                petFriendly: ''
+                petfriendly: ''
+
             };
-        },
-        deleteItem: item => {
-            vm.plants = vm.plants.filter(plant => {
-                return plant !== plant;
-            });
         }
     }
 });
