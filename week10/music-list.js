@@ -13,7 +13,7 @@ const vm = new Vue({
     },
     mounted () {
         axios 
-            .get('music-list.json')
+            .get('./data/music-list.json')
             .then(response => {
                 console.log('response', response);
                 vm.tracks = response.data;
