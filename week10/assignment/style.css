@@ -1,0 +1,21 @@
+html{
+    --white: #ffffff;
+    --yellow: #BD8F2F;
+}
+
+body{
+    background-color: var(--yellow);
+    color: var(--white);
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 1em;
+    padding: 2em;
+}
+
+h1{
+    font-size: 40px; 
+}
+
+tr{
+    text-align: left;
+}
