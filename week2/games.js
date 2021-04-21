@@ -27,10 +27,10 @@ window.alert(
     "You selected " +
       myGames[games - 1].game +
       ", which is a " +
-      myGames[games - 1].players +
+      myGames[games - 1].numberOfPlayers +
       " player game" +
       " and is played using a " +
-      myGames[games - 1].type +
+      myGames[games - 1].format +
       ". It is " +
-      myGames[games - 1].shortDescription
+      myGames[games - 1].description
   );
