@@ -1,15 +1,25 @@
 
-var mySound;
-
+let mySound;
 function preload() {
-    mySound = loadSound('zapsplat_nature_forest_birds_wind_trees_leaves_falling_qld_australia_56740.mp3');
+    soundFormats ('mp3');
+    mySound = loadSound('forest.mp3');
 }
 
 function setup() {
-    mySound.setVolume(0.1);
-    mySound.play();
-}
+    let cnv = createCanvas(600, 600);
+    cnv.mousePressed(canvasPressed);
+    background(0);
+    amp = new p5.Amplitude();
+    amp.setInput(mySound);
+  }
+  
 
 function draw() {
 
 }
+
+function canvasPressed() {
+    // playing a sound file on a user gesture
+    // is equivalent to `userStartAudio()`
+    mySound.play();
+  }
