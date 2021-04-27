@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-    let cnv = createCanvas(600, 600);
+    let cnv = createCanvas(400, 400);
     cnv.mousePressed(canvasPressed);
     background(0);
     amp = new p5.Amplitude();
@@ -15,7 +15,7 @@ function setup() {
   
 
 function draw() {
-
+    background (154, 182, 87)
 }
 
 function canvasPressed() {
