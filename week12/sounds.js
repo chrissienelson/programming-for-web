@@ -1,7 +1,7 @@
 
 let mySound;
 function preload() {
-    soundFormats ('mp3');
+    soundFormats('mp3');
     mySound = loadSound('forest.mp3');
 }
 
