@@ -1,15 +1,15 @@
 html{
     --white: #ffffff;
-    --green: #037642;
+    --tan: #ded2bf;
 }
 
 body{
-    background-color: var(--green);
-    color: var(--white);
+    background-color: var(--tan);
     font-family: Helvetica, sans-serif;
     font-size: 20px;
-    margin-left: 1em;
+    margin-left: 4em;
     padding: 2em;
+
 }
 
 h1{
