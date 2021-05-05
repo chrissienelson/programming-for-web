@@ -13,7 +13,7 @@ const gameState = {
 let cardfaceArray = [];
 let cardback;
 function preload() {
-    cardback = loadImage('')
+    cardback = loadImage('images/meow-cardback.png')
     cardfaceArray = [
         loadImage('images/kitten1.jpg'),
         loadImage('images/kitten2.jpg'),
@@ -68,11 +68,11 @@ function draw () {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill (255);
-    textSize(30);
+    fill (0);
+    textSize(20);
     text('attempts: ' + gameState.attempts, 100, 425);
-    text('matches: ' + gameState.numMatched, 300, 425);
-    fill('#fffff');
+    text('matches: ' + gameState.numMatched, 250, 425);
+    fill('#000000');
     textSize(20);
     text('Match the tone of each music note!', 100, 65);
 }

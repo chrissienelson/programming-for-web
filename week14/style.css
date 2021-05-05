@@ -1,6 +1,12 @@
 html{
-    --white: #ffffff;
     --tan: #ded2bf;
+    box-sizing: border-box;
+      }
+    *, 
+    *:before, 
+    *:after{
+        box-sizing: inherit;
+      }
 }
 
 body{
@@ -14,9 +20,8 @@ body{
 
 h1{
     font-size: 40px; 
+    margin-left: em;
+    text-align: center;
 }
 
-tr{
-    text-align: left;
-}
 
