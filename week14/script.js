@@ -20,12 +20,12 @@ function preload() {
     cardback = loadImage('images/music-note.png')
     cardfaceArray = [
         loadImage('images/treble-clef.png'),
-        loadImage('images/kitten2.jpg'),
-        loadImage('images/kitten3.jpg'),
-        loadImage('images/kitten4.jpg'),
-        loadImage('images/kitten3.jpg'),
-        loadImage('images/kitten4.jpg'),
-        loadImage('images/kitten5.jpg')
+        loadImage('images/bass-clef.png'),
+        loadImage('images/eighth-note.png'),
+        loadImage('images/quarter-note.png'),
+        loadImage('images/sixteenth-note.png'),
+        loadImage('images/whole-note.png'),
+        loadImage('images/half-note.png')
     ]
 }
 
